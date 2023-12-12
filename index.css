@@ -1,0 +1,172 @@
+body, #BG, h1, h2, span, .Pw-Btn, .hr {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    margin: 0;
+    background: #1C1C1C;
+    font-family: inter;
+}
+    
+
+#BG {
+    position: relative; 
+    margin-right: auto;
+    margin-left: auto;
+    width: 550px;
+    height: 550px;
+    background: #1F2937;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;  
+    
+}
+
+.hr {
+    background: #2F3E53;
+    height: 1px;
+    border: none;
+}
+
+
+#Container {
+    width: 446px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+    font-family: Karla;
+    font-weight: 800;  
+    font-size: 40px; 
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    color: #D5D4D8;
+}
+
+span {
+    color: #4ADF86;
+}
+
+#Pw-Gen-Btn {
+    margin-bottom: 35px;
+    margin-top: 50px;
+    padding: 9px 17px 9px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #10B981;
+    color: white;
+}
+
+.Pw-Btn {
+    margin-top: 35px;
+    border-radius: 6px;
+    background: #273549;
+    color: #55F991;
+    border: none;
+    width: 211px;
+    height: 39px;
+}
+
+#Pw-2-Btn {
+    margin-left: 18px;
+}
+
+
+/* LIGHT THEME */
+
+body.light-theme {
+    margin: 0;
+    background: #ffffff;
+    font-family: inter;
+}
+
+body.light-theme #BG {
+    background: #ECFDF5;
+}
+
+body.light-theme h1 {
+    color: #2B283A;
+}
+
+
+body.light-theme h2 {
+    color: #6B7280;
+}
+
+body.light-theme span {
+    color: #10B981;
+}
+
+body.light-theme .Pw-Btn {
+    color: #10B981;
+}
+
+/* TOOGLE SWITCH */
+
+#ToggleContainer {
+    position: absolute;
+    top: 40px;
+    right: 52px;
+    width: 42px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px; /* 60px * 0.7 */
+  height: 23.8px; /* 34px * 0.7 */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #545454;
+  transition: .4s;
+  border-radius: 23.8px; /* Same as height */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18.2px; 
+  width: 18.2px; 
+  left: 2.8px; 
+  bottom: 2.8px; 
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: lightgray;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18.2px); /* Adjusted for the new width */
+}
+
+body.light-theme .switch .slider:before {
+  background-color: #545454; 
+  
+  }
